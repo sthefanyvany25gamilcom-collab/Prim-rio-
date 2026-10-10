@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11132b">
+  <meta name="description" content="Caça-Estrelas: um mini game de navegador feito com HTML, CSS e JavaScript.">
+  <title>Caça-Estrelas ✦</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Caça-Estrelas - início"><span class="brand-mark">✦</span> caça-estrelas</a>
+      <span class="pill"><span class="status-dot"></span> mini game</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">UM DESAFIO CÓSMICO</p>
+      <h1>Pronta para<br><span>brilhar?</span></h1>
+      <p class="intro">Clique nas estrelas antes que o tempo acabe.<br>Quantas você consegue pegar?</p>
+    </section>
+
+    <section class="game-card" aria-label="Área do jogo">
+      <div class="stats">
+        <div class="stat"><span class="stat-label">PONTOS</span><strong id="score">00</strong></div>
+        <div class="stat"><span class="stat-label">TEMPO</span><strong id="time">30<span class="seconds">s</span></strong></div>
+        <div class="stat"><span class="stat-label">RECORDE</span><strong id="best">00</strong></div>
+      </div>
+
+      <div class="progress-track" aria-label="Tempo restante"><div id="progress" class="progress-fill"></div></div>
+
+      <div id="playfield" class="playfield">
+        <div class="field-stars" aria-hidden="true">✧　·　✦　　 ·　✧<br>　·　　 ✧　　·</div>
+        <div id="welcome" class="welcome">
+          <div class="planet" aria-hidden="true">🪐</div>
+          <h2>O universo é seu!</h2>
+          <p>Você tem 30 segundos.<br>Toque nas estrelas para pontuar.</p>
+          <button id="startBtn" class="primary-btn">Começar a jogar <span>↗</span></button>
+        </div>
+        <button id="target" class="target" aria-label="Pegar estrela" hidden>✦</button>
+        <div id="result" class="result" hidden>
+          <div class="result-icon">✨</div>
+          <p class="eyebrow">FIM DE JOGO</p>
+          <h2 id="resultTitle">Mandou bem!</h2>
+          <p id="resultText">Você pegou 0 estrelas.</p>
+          <button id="againBtn" class="primary-btn">Jogar novamente <span>↻</span></button>
+        </div>
+      </div>
+      <p class="tip"><span>✦</span> Dica: estrelas diferentes valem pontos diferentes!</p>
+    </section>
+
+    <footer>
+      <span>Feito com curiosidade e ☕</span>
+      <span>HTML · CSS · JavaScript</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
